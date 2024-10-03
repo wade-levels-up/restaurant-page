@@ -1,4 +1,4 @@
 import "./style.css";
-import { greeting } from "./greeting.js"
+import { greeting } from "./greeting.js";
 
 console.log(greeting);
