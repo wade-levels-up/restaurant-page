@@ -1,27 +1,21 @@
 import pizzaLoungImg from '../assets/aldward-castillo-Lys3krd8jck-unsplash.jpg';
+import { createDOMElement } from './elementFactory';
 
-export function home() {
+export function renderHome() {
 
     const mainContent = document.querySelector('#content');
+    mainContent.textContent = "";
 
-    const homeContent = document.createElement('div');
-    homeContent.classList.add('container');
+    const homeContent = createDOMElement('div', '', 'class', 'container');
 
-    const title = document.createElement('h2');
-    title.textContent = "Home";
-    const welcome = document.createElement('p');
-    welcome.textContent = `Welcome to Luigi's Pizza Lounge! The best pizza lounge in all of Nutropolis. Please see our menu and about tabs for more information`;
-    const image = document.createElement('img');
-    image.src = pizzaLoungImg;
-    image.alt = `Luigi's pizza lounge, a warmly lit long room aligned with chairs and tables`;
-    const credit = document.createElement('a');
-    credit.classList.add('credit');
-    credit.href = "https://unsplash.com/@aldwardcv31?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash";
-    credit.textContent = `Photo by Aldward Castillo on Unsplash`;
+    const title = createDOMElement('h2', 'Home');
+    const welcome = createDOMElement('p', `Welcome to Luigi's Pizza Lounge! The best pizza lounge in all of Nutropolis. Please see our menu and about tabs for more information`);
+    const image = createDOMElement('img', '', 'src', pizzaLoungImg, 'alt', `Warmly lit long room aligned with tables and chairs for dining`);
+    const credit = createDOMElement('a', 'Photo by Aldward Castillo on Unsplash', 'class', 'credit');
 
-    homeContent.appendChild(title);
-    homeContent.appendChild(welcome);
-    homeContent.appendChild(image);
-    homeContent.appendChild(credit);
+    const childElements = [title, welcome, image, credit];
+
+    for (let el of childElements) { homeContent.appendChild(el); }
     mainContent.appendChild(homeContent)
-}
+    
+};
