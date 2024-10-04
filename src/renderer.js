@@ -1,5 +1,6 @@
 import { renderAbout } from "./about";
 import { renderHome } from "./home";
+import { renderMenu } from "./menu";
 
 const navBtns = Array.from(document.querySelectorAll('.navButton'));
 const [homeBtn, menuBtn, aboutBtn] = navBtns;
@@ -10,8 +11,6 @@ export const initLoad = (function() {
 
 homeBtn.addEventListener('click', renderHome);
 
-menuBtn.addEventListener('click', ()=>{
-    alert('I am the menu button!');
-})
+menuBtn.addEventListener('click', renderMenu);
 
 aboutBtn.addEventListener('click', renderAbout);
