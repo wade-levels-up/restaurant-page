@@ -16,8 +16,8 @@ class MenuItem {
 
 const pizza_supreme = new MenuItem('Supreme', 'Pepperoni, capsicum, onions, mushrooms, olives and cheese are all piled on for unbeatably hearty slices.', supremePizzaImg, 24);
 const pizza_hawaiian = new MenuItem('Hawaiian', 'Combining pineapple, cheese, and ham, Hawaiian pizza is sweet, salty, and cheesy all in one bite.', hawaiianPizzaImg, 24);
-const pizza_meatlovers = new MenuItem(`PaPa's Meatlbol Sooprem`, `Fully loaded with pepperoni, Italian sausage, ham, bacon, seasoned pork & beef plus Luigi's special sauce`, meatloversPizzaImg, 24);
-const pasta_mamas = new MenuItem(`LaMaMa's Pomodoro Cheez`, `Penne smothered in juicy vine-ripened roma tomatos and Mama's special triple-cheese entente`, pasta1, 19);
+const pizza_meatlovers = new MenuItem(`PaPa's Meatbol Sooprem`, `Fully loaded with pepperoni, Italian sausage, ham, bacon, seasoned pork & beef plus Luigi's special sauce`, meatloversPizzaImg, 24);
+const pasta_mamas = new MenuItem(`MaMa's Pomodoro Cheez`, `Penne smothered in juicy vine-ripened roma tomatos and Mama's special triple-cheese entente`, pasta1, 19);
 
 const menuArray = [pizza_supreme, pizza_hawaiian, pizza_meatlovers, pasta_mamas];
 
@@ -34,7 +34,7 @@ export function renderMenu() {
     
     for (let item of menuArray) {
         let menuCard = createDOMElement('div', '', 'class', 'menuCard');
-        menuCard.appendChild(createDOMElement('h2', item.name));
+        menuCard.appendChild(createDOMElement('h3', item.name));
         menuCard.appendChild(createDOMElement('p', item.desc));
         menuCard.appendChild(createDOMElement('img', '', 'src', item.img));
         menuCard.appendChild(createDOMElement('p', item.price));

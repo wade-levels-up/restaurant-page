@@ -8,8 +8,9 @@
 }
 
 :root { 
-    font-size: 16px; 
+    font-size: calc(16px + 0.1vw); 
     --padding: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif
 }
 * { margin: 0px; padding: 0px; box-sizing: border-box; list-style: none; text-decoration: none;}
 
@@ -17,18 +18,34 @@ body {
     width: 100vw;
     height: 100vh;
     background-color: black;
-    color: aliceblue;
+    color:whitesmoke;
 }
 
 h1, h2 {
     text-align: center;
     padding: var(--padding);
     font-family: italiano;
+    letter-spacing: 0.3rem;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#gifbanner {
+    width: clamp(300px, 30%, 300px);
 }
 
 a:hover {
     color: chocolate;
     cursor: pointer;
+}
+
+a:visited {
+    color: green;
 }
 
 header nav {
@@ -39,16 +56,26 @@ header nav {
     padding: var(--padding);
 }
 
+nav button:nth-child(1) { background-color: green; color: white; border-radius: 30px 10px 0px 0px; }
+nav button:nth-child(2) { border-radius: 30px 10px 0px 0px;}
+nav button:nth-child(3) { background-color: red; border-radius: 30px 10px 0px 0px; color: white;}
+
 .container {
     border: 1px solid rgb(255, 255, 255, 0.2);
     border-radius: 40px;
-    margin: 0px 15px;
+    margin: 10px 5px 50px 5px;
     padding: var(--padding);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 15px;
+}
+
+.container p {
+    padding: var(--padding);
+    max-width: 28ch;
+    line-height: 1.5rem;
 }
 
 img {
@@ -74,16 +101,40 @@ img {
     border: 6px inset rgb(255, 30, 0);
     outline: 1px solid rgb(233, 211, 42);
     border-radius: 60px;
-    padding-bottom: 10px;
+    padding: var(--padding);
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
-    gap: 5px;
+    gap: 15px;
+    transition: ease-in-out 500ms;
+}
+
+.menuCard:hover {
+    transform: scale(1.05);
 }
 
 .menuCard img { width: 60%; }
-.menuCard p { width: 20ch; }
+.menuCard p { width: 25ch; }
+
+footer {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 5vh;
+    padding: 3px;
+    font-size: 0.8rem;
+    border-top: 1px solid grey;
+    gap: 10px;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}
+
 
 
 
