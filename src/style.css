@@ -1,4 +1,47 @@
+:root { 
+    font-size: 16px; 
+    --padding: 15px;
+}
+* { margin: 0px; padding: 0px; box-sizing: border-box; list-style: none; text-decoration: none;}
+
 body {
+    width: 100vw;
+    height: 100vh;
     background-color: black;
     color: aliceblue;
+}
+
+h1, h2 {
+    text-align: center;
+    padding: var(--padding);
+}
+
+header nav {
+    display: grid;
+    place-content: center;
+    grid-template: 1fr / repeat(3, 1fr);
+    gap: 20px;
+    padding: var(--padding);
+}
+
+.container {
+    border: 1px solid white;
+    margin: 0px 15px;
+    padding: var(--padding);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+img {
+    width: 100%;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.credit {
+    color: aliceblue;
+    font-size: 0.8rem;
 }
