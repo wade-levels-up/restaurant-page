@@ -48,6 +48,10 @@ a:visited {
     color: green;
 }
 
+button {
+    padding: 5px 10px 10px 15px;
+}
+
 header nav {
     display: grid;
     place-content: center;
@@ -63,7 +67,7 @@ nav button:nth-child(3) { background-color: red; border-radius: 30px 10px 0px 0p
 .container {
     border: 1px solid rgb(255, 255, 255, 0.2);
     border-radius: 40px;
-    margin: 10px 5px 50px 5px;
+    margin: 0px 5px 50px 5px;
     padding: var(--padding);
     display: flex;
     flex-direction: column;
@@ -124,9 +128,10 @@ footer {
     align-items: center;
     height: 5vh;
     padding: 3px;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     border-top: 1px solid grey;
     gap: 10px;
+    font-family: monospace;
 }
 
 svg {
